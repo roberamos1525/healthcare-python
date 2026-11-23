@@ -124,6 +124,10 @@ validator dereferences the null list element. This backend reports the element a
 how the reference treats every other wrong value inside the list. This is the only difference in the
 final comparison run.
 
+**Update, 23 November 2026:** the reference has since been fixed (HealthCare-C# commit `b9eed75`) and now
+answers this request with the same `400` and `errors` body as this backend, so the difference is gone.
+The comparison figures were measured against the earlier reference build.
+
 The earlier reference defect for `PUT /api/v1/providers/{id}` with specialties (always 409) is fixed in the
 reference (commit `239973c`); the comparison run against a build containing that commit shows identical
 behaviour, so there is no deviation for it.

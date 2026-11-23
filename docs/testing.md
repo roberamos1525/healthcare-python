@@ -95,7 +95,7 @@ port 54329, Redis 5.0.14):
 | `ruff check src tests`, `ruff format --check` | clean |
 | `mypy --strict src tests` | no issues (90 files) |
 | Schema comparison | `pg_dump --schema-only` of a database migrated by this backend and of one migrated by the reference (release build): 2,561 lines each, identical apart from the history table and pg_dump's random `\restrict` token |
-| Black-box comparison with the reference (release build containing commit `239973c`) | 223 exchanges: 222 identical in status, selected headers, normalized body and member order; 1 difference, a reference defect (`specialties: [null]` → 500 there, 400 here; [troubleshooting.md](troubleshooting.md#4-defect-in-the-reference-implementation-not-reproduced)) |
+| Black-box comparison with the reference (release build containing commit `239973c`) | 223 exchanges: 222 identical in status, selected headers, normalized body and member order; 1 difference, a reference defect (`specialties: [null]` → 500 there, 400 here; [troubleshooting.md](troubleshooting.md#4-defect-in-the-reference-implementation-not-reproduced)), since fixed in the reference (commit `b9eed75`) |
 
 The black-box comparison found two real differences during development (whitespace-only bodies, and
 `GET /patients/self-registration` → 405 `Allow: POST`); both are fixed and covered by unit tests
