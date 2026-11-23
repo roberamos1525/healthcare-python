@@ -310,7 +310,7 @@ rate-based rules provide the global limit.
 
 ## 7. CI/CD pipeline
 
-The repository's CI workflow (`.github/workflows/ci.yml`) covers stages 1–3, the dependency audit
+The repository's CI workflow (`ci/github-actions/ci.yml`) covers stages 1–3, the dependency audit
 of stage 4 (secret scanning and static analysis are not yet configured) and the image build and scan
 (stages 5–6, without SBOM generation): install the locked dependencies with uv, `ruff check` and
 `ruff format --check`, `mypy --strict` for `src` and `tests`, a `pip-audit` of the locked runtime
