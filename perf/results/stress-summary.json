@@ -1,0 +1,328 @@
+{
+    "metrics": {
+        "unexpected_errors": {
+            "fails": 17306,
+            "passes": 0,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_req_sending": {
+            "avg": 0.004557540727996128,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 4.7011
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 18599,
+            "value": 0
+        },
+        "http_req_duration{name:patient_read}": {
+            "avg": 18.883053152279356,
+            "min": 1.5096,
+            "med": 4.6105,
+            "p(90)": 7.877220000000002,
+            "p(95)": 9.387519999999965,
+            "p(99)": 15.368743999999994,
+            "max": 4969.5184,
+            "thresholds": {
+                "p(95)<300": false
+            }
+        },
+        "vus_max": {
+            "value": 100,
+            "min": 100,
+            "max": 100
+        },
+        "http_req_duration{name:directory_search}": {
+            "p(95)": 10.833529999999987,
+            "p(99)": 16.66691800000001,
+            "max": 5620.7129,
+            "avg": 21.327064077046582,
+            "min": 2.0228,
+            "med": 5.3303,
+            "p(90)": 8.90982,
+            "thresholds": {
+                "p(95)<300": false
+            }
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 0
+        },
+        "data_received": {
+            "count": 61102610,
+            "rate": 320228.235855335
+        },
+        "booking_latency": {
+            "med": 15.2081,
+            "p(90)": 24.90594,
+            "p(95)": 28.417719999999992,
+            "p(99)": 41.75149199999974,
+            "max": 65.4987,
+            "avg": 16.755461392949293,
+            "min": 8.2438
+        },
+        "bookings_created": {
+            "count": 1163,
+            "rate": 6.095082326266499
+        },
+        "http_req_receiving": {
+            "p(99)": 1.388652000000001,
+            "max": 4.1705,
+            "avg": 0.2757070541426967,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0.8647200000000005,
+            "p(95)": 0.9816099999999999
+        },
+        "vus": {
+            "max": 100,
+            "value": 3,
+            "min": 0
+        },
+        "http_reqs": {
+            "count": 18599,
+            "rate": 97.47414977319916
+        },
+        "http_req_duration{name:availability}": {
+            "min": 2.8285,
+            "med": 6.3903,
+            "p(90)": 9.92712,
+            "p(95)": 12.311589999999999,
+            "p(99)": 95.8499060000008,
+            "max": 6020.3159,
+            "avg": 27.37200223435103,
+            "thresholds": {
+                "p(95)<300": false
+            }
+        },
+        "http_req_duration{expected_response:true}": {
+            "max": 6244.1658,
+            "avg": 28.699740808645412,
+            "min": 0,
+            "med": 5.9346,
+            "p(90)": 15.258300000000002,
+            "p(95)": 134.20210999999978,
+            "p(99)": 216.1068900000001
+        },
+        "http_req_blocked": {
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 2.1779,
+            "avg": 0.004868267111135005
+        },
+        "http_req_waiting": {
+            "avg": 28.41947621377478,
+            "min": 0,
+            "med": 5.6671,
+            "p(90)": 14.939760000000001,
+            "p(95)": 133.85761999999986,
+            "p(99)": 215.97263000000007,
+            "max": 6244.1658
+        },
+        "data_sent": {
+            "count": 18057566,
+            "rate": 94636.58760274363
+        },
+        "checks": {
+            "passes": 18469,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_duration{name:appointment_book}": {
+            "avg": 16.755461392949293,
+            "min": 8.2438,
+            "med": 15.2081,
+            "p(90)": 24.90594,
+            "p(95)": 28.417719999999992,
+            "p(99)": 41.75149199999974,
+            "max": 65.4987,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        },
+        "http_req_connecting": {
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 1.5524,
+            "avg": 0.0035492176998763365,
+            "min": 0
+        },
+        "http_req_duration": {
+            "avg": 28.699740808645412,
+            "min": 0,
+            "med": 5.9346,
+            "p(90)": 15.258300000000002,
+            "p(95)": 134.20210999999978,
+            "p(99)": 216.1068900000001,
+            "max": 6244.1658
+        },
+        "iterations": {
+            "rate": 68.392798244005,
+            "count": 13050
+        },
+        "iteration_duration": {
+            "p(90)": 1037.92643,
+            "p(95)": 1163.46264,
+            "p(99)": 1230.137014,
+            "max": 7244.6859,
+            "avg": 623.290791233716,
+            "min": 502.1307,
+            "med": 507.96465
+        }
+    },
+    "setup_data": {
+        "patientIds": [
+            "01a2082c-8476-76b8-941e-c67f3d04d559",
+            "01a2082c-8484-7027-b0d6-f60396180ea2",
+            "01a2082c-848d-7163-a65f-7cb01e629df5",
+            "01a2082c-8496-750d-829a-7c7d265e7c04",
+            "01a2082c-849e-7231-a0d0-5829749b4a6e",
+            "01a2082c-84a2-7001-8bbf-29fd4e2de9f3",
+            "01a2082c-84a6-73d3-a081-8f875de59e9e",
+            "01a2082c-84aa-773d-8ce3-5820594f5ae5",
+            "01a2082c-84af-761b-b823-98b772823a10",
+            "01a2082c-84b2-73b2-ba92-1e4f2b38b5b5",
+            "01a2082c-84b6-76d2-8909-f37c0d199411",
+            "01a2082c-84bb-736f-a2ec-c4628ddd6223",
+            "01a2082c-84bf-7426-9e1f-ad8cddc27593",
+            "01a2082c-84c3-70bd-8279-b998338af4d0",
+            "01a2082c-84c8-70ad-b437-dba014914004",
+            "01a2082c-84cc-74eb-88ec-d227c61eb3f9",
+            "01a2082c-84cf-7106-ab63-727cd4bc3a14",
+            "01a2082c-84d3-71f2-ae21-ca92653d6c79",
+            "01a2082c-84d7-7437-bb61-2f7a9c16f946",
+            "01a2082c-84db-7224-b0b3-aa0509ac6789",
+            "01a2082c-84df-70fa-99b5-d0af01f18515",
+            "01a2082c-84e2-7299-987f-9dbec8c9a366",
+            "01a2082c-84e6-7322-a9cb-2fe0c9d865bc",
+            "01a2082c-84ea-7698-9042-841408a51391",
+            "01a2082c-84ed-77d2-847c-7e20f39ea87a",
+            "01a2082c-84f0-704b-9f12-d0095973b2dd",
+            "01a2082c-84f4-7113-a5cd-a9f6c8092db6",
+            "01a2082c-84f7-736e-b243-d923f43dae0b",
+            "01a2082c-84fb-708d-a4b1-c6fcddf5033a",
+            "01a2082c-84fe-7548-a798-3a5fcdce65a3",
+            "01a2082c-8501-7664-821e-61b61db56a5f",
+            "01a2082c-8504-7160-8676-47f5a66bd51c",
+            "01a2082c-8508-761c-99dc-d67bc97dc8c7",
+            "01a2082c-850c-7366-b199-8193911ecece",
+            "01a2082c-8510-7592-ba43-c78cd199a6a0",
+            "01a2082c-8514-725c-9e53-3f7b3f598b71",
+            "01a2082c-8518-7134-9fdd-e4168cf140c2",
+            "01a2082c-851b-765c-be38-ede61067d73d",
+            "01a2082c-851f-76c0-975d-61d607d224d2",
+            "01a2082c-8522-767c-b263-e8c21dff786e",
+            "01a2082c-8525-7269-b553-06e61e0cccec",
+            "01a2082c-8529-7602-9aa9-372c0c559660",
+            "01a2082c-852c-7148-be0b-e50df9d7f563",
+            "01a2082c-852f-739e-9538-a41dd392e6ff",
+            "01a2082c-8532-71cd-92bc-bc620c5eb155",
+            "01a2082c-8536-7265-a418-802f747987fd",
+            "01a2082c-8539-7710-aa29-4719cbd71cef",
+            "01a2082c-853c-70a9-a08f-5b16e6be3824",
+            "01a2082c-8540-74c4-9d06-fa468e150757",
+            "01a2082c-8543-70a0-9321-f21f5c4e3f78"
+        ],
+        "portalToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlByaDd4VDJfekw5T3daNDAiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIwMWEyMDgyYy05ZTg1LTczOGItYWNjMi0wZmExNTg3OWI2ZWUiLCJzaWQiOiIwMWEyMDgyYy1hMmZhLTc3MDYtODExZS05YmUxNDA1MmNkZGMiLCJqdGkiOiJhMjlkZDY5MmVlOWE0MWFkODQ5ZDVmYjRjMmJhYTI5YyIsImlzcyI6ImhlYWx0aGNhcmUtcGxhdGZvcm0iLCJhdWQiOiJoZWFsdGhjYXJlLWFwaSIsImlhdCI6MTc5NTQzMzQ3MiwibmJmIjoxNzk1NDMzNDcyLCJleHAiOjE3OTU0MzQwNzJ9.frTYEh7xYBrxI4VdBmKXsc9mqH60_klgLIDa6abv--fBLXwiyiDcUzau8mWyB7zBl3gWmhrOcTIvx72ydL9Ox1bpiFHucRpvTYB2c1ovxELrNz1Qg-u_3-agv_xCC6NANUrNDvNA4s5SuEkoFT1UE6yGsO_7wTWWBtoA4hVokx8xGboWgxleFOD-zhpr_Uezron7WxXBxaIGOB6QpEc8-GXRyN-6LSzKM9x4AziVXugXerIpr5GnSN6e2KPFBscbrjl3StZEKnEzb2HB4guXUXn_uTUqdw8U4A2C9V8V4QnefU3CSDyWF8qKvOSHwltYrk02o54Wsa_kLzC2R8TxTA",
+        "providerId": "01a2082c-8423-71b7-9ec4-c38ac2c85943",
+        "signInUsers": [
+            "perf.signin.mwt6q81y2myra0ag5@example.test",
+            "perf.signin.mwt6q91346orlyuf6@example.test",
+            "perf.signin.mwt6qa0c6w5f8mjv7@example.test",
+            "perf.signin.mwt6qazp9y86axzx8@example.test",
+            "perf.signin.mwt6qbyybw3m1dra9@example.test"
+        ],
+        "locationId": "01a2082c-841f-70c3-b8d4-5acd017103b4",
+        "organizationId": "01a2082c-8402-7211-ae37-15d7ba428dbe",
+        "ownerEmail": "perf.owner.mwt6q6bq8mqcbyyr1@example.test",
+        "ownerToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlByaDd4VDJfekw5T3daNDAiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIwMWEyMDgyYy03ZDc3LTcwYTAtOGMwMi03ZDAzZjJjN2MxY2MiLCJzaWQiOiIwMWEyMDgyYy04M2YzLTcxNWUtYWQyYy1iMDJhYjU3MmE2ZjMiLCJqdGkiOiIyMDI4ODU5ZWMyZWE0YjJmOTA1MTAwMWNkNDgwMWY3NCIsImlzcyI6ImhlYWx0aGNhcmUtcGxhdGZvcm0iLCJhdWQiOiJoZWFsdGhjYXJlLWFwaSIsImlhdCI6MTc5NTQzMzQ2NCwibmJmIjoxNzk1NDMzNDY0LCJleHAiOjE3OTU0MzQwNjR9.WO7GodIjP8nILLLo0DgIrHIaHNVBpS7bHoqdOYwMx1Wdmcm7vZW6Ywd3hQxXVBzT2c8hJIqC-OXELWistiS_caF1QpM7Jg9_OSl5FLSSuAWlW2wZq1KtpLwumpR6eD40FH1Wrhxjsa6jyPwgUCZVNOq4_0ZVBbFYzsaQLNaDuEFpOHjsNNffH4WIyr7yEScZByPLRzoH4D0y7ehYVbrSkg0TC00yFWYnZlmVXq4CAPd6RyH6qoxUroxG9HACHS6NxctmZEVqTeh1xxSmgK4ECrONC1sP9c0LjV9CmjHVp1maiaAS9i4lEda1MCiQbw0Joz6mBmnWk6p2X9PT1JTbKw"
+    },
+    "root_group": {
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+            "availability status 200": {
+                "passes": 4700,
+                "fails": 0,
+                "name": "availability status 200",
+                "path": "::availability status 200",
+                "id": "373d6e5f4c27a9e88b1fd2da5f488c6e"
+            },
+            "directory search status 200": {
+                "passes": 3115,
+                "fails": 0,
+                "name": "directory search status 200",
+                "path": "::directory search status 200",
+                "id": "90a63f29bea9bc82cfbd58adec20f9fe"
+            },
+            "patient read status 200": {
+                "name": "patient read status 200",
+                "path": "::patient read status 200",
+                "id": "98e06ffc8e33294659b7eb0d0b3d0f5b",
+                "passes": 3093,
+                "fails": 0
+            },
+            "patient search status 200": {
+                "name": "patient search status 200",
+                "path": "::patient search status 200",
+                "id": "e36f923ff3282db97398d9e28e43b39e",
+                "passes": 3093,
+                "fails": 0
+            },
+            "booking availability status 200": {
+                "name": "booking availability status 200",
+                "path": "::booking availability status 200",
+                "id": "946578a912c577a841827cab446cccd5",
+                "passes": 1163,
+                "fails": 0
+            },
+            "book status 201/409": {
+                "name": "book status 201/409",
+                "path": "::book status 201/409",
+                "id": "aa161ab8489051ab9752ad8575ed9324",
+                "passes": 1163,
+                "fails": 0
+            },
+            "cancel status 200": {
+                "name": "cancel status 200",
+                "path": "::cancel status 200",
+                "id": "443535d1b6056e72320c0a4423b61dbd",
+                "passes": 1163,
+                "fails": 0
+            },
+            "login status 200": {
+                "name": "login status 200",
+                "path": "::login status 200",
+                "id": "a9f04e9f501317c68a9f824e04811bea",
+                "passes": 654,
+                "fails": 0
+            },
+            "register status 202": {
+                "name": "register status 202",
+                "path": "::register status 202",
+                "id": "0da66dc9c0d7560a399046ee87ad5d1d",
+                "passes": 325,
+                "fails": 0
+            }
+        },
+        "name": ""
+    }
+}

@@ -1,0 +1,30 @@
+# Python environments, caches and build output
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Local configuration and secrets
+.env
+*.pem
+*.key
+*.pfx
+
+# Local runtime output
+/mail-pickup/
+*.log
+/perf/results/*-api.err
+/perf/results/diag-*
+
+# Editors and operating systems
+.vs/
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store

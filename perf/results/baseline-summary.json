@@ -1,0 +1,328 @@
+{
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+            "availability status 200": {
+                "fails": 0,
+                "name": "availability status 200",
+                "path": "::availability status 200",
+                "id": "373d6e5f4c27a9e88b1fd2da5f488c6e",
+                "passes": 952
+            },
+            "booking availability status 200": {
+                "passes": 236,
+                "fails": 0,
+                "name": "booking availability status 200",
+                "path": "::booking availability status 200",
+                "id": "946578a912c577a841827cab446cccd5"
+            },
+            "patient read status 200": {
+                "name": "patient read status 200",
+                "path": "::patient read status 200",
+                "id": "98e06ffc8e33294659b7eb0d0b3d0f5b",
+                "passes": 562,
+                "fails": 0
+            },
+            "patient search status 200": {
+                "name": "patient search status 200",
+                "path": "::patient search status 200",
+                "id": "e36f923ff3282db97398d9e28e43b39e",
+                "passes": 562,
+                "fails": 0
+            },
+            "directory search status 200": {
+                "name": "directory search status 200",
+                "path": "::directory search status 200",
+                "id": "90a63f29bea9bc82cfbd58adec20f9fe",
+                "passes": 567,
+                "fails": 0
+            },
+            "book status 201/409": {
+                "path": "::book status 201/409",
+                "id": "aa161ab8489051ab9752ad8575ed9324",
+                "passes": 236,
+                "fails": 0,
+                "name": "book status 201/409"
+            },
+            "cancel status 200": {
+                "fails": 0,
+                "name": "cancel status 200",
+                "path": "::cancel status 200",
+                "id": "443535d1b6056e72320c0a4423b61dbd",
+                "passes": 236
+            },
+            "login status 200": {
+                "name": "login status 200",
+                "path": "::login status 200",
+                "id": "a9f04e9f501317c68a9f824e04811bea",
+                "passes": 146,
+                "fails": 0
+            },
+            "register status 202": {
+                "name": "register status 202",
+                "path": "::register status 202",
+                "id": "0da66dc9c0d7560a399046ee87ad5d1d",
+                "passes": 132,
+                "fails": 0
+            }
+        },
+        "name": "",
+        "path": ""
+    },
+    "metrics": {
+        "http_req_sending": {
+            "avg": 0.007299999999999998,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 3.5274
+        },
+        "iterations": {
+            "count": 2595,
+            "rate": 13.624531450328933
+        },
+        "http_req_duration{name:patient_read}": {
+            "avg": 3.9516969750889657,
+            "min": 1.508,
+            "med": 3.8392,
+            "p(90)": 5.013,
+            "p(95)": 5.276259999999999,
+            "p(99)": 7.347537999999996,
+            "max": 15.3634,
+            "thresholds": {
+                "p(95)<300": false
+            }
+        },
+        "data_sent": {
+            "count": 3561675,
+            "rate": 18699.866301869093
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 3758,
+            "value": 0
+        },
+        "booking_latency": {
+            "avg": 12.0554372881356,
+            "min": 8.0165,
+            "med": 11.0482,
+            "p(90)": 15.55855,
+            "p(95)": 17.315175,
+            "p(99)": 32.75629000000007,
+            "max": 45.9986
+        },
+        "http_req_duration{name:appointment_book}": {
+            "avg": 12.0554372881356,
+            "min": 8.0165,
+            "med": 11.0482,
+            "p(90)": 15.55855,
+            "p(95)": 17.315175,
+            "p(99)": 32.75629000000007,
+            "max": 45.9986,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        },
+        "vus": {
+            "max": 20,
+            "value": 6,
+            "min": 0
+        },
+        "vus_max": {
+            "max": 20,
+            "value": 20,
+            "min": 20
+        },
+        "data_received": {
+            "count": 11844345,
+            "rate": 62186.378019671
+        },
+        "http_req_duration{expected_response:true}": {
+            "avg": 15.604393001596565,
+            "min": 0,
+            "med": 4.661,
+            "p(90)": 12.653900000000002,
+            "p(95)": 129.83001999999996,
+            "p(99)": 154.36028,
+            "max": 243.1169
+        },
+        "http_req_waiting": {
+            "p(95)": 129.611505,
+            "p(99)": 154.03510599999998,
+            "max": 242.3732,
+            "avg": 15.293907317722162,
+            "min": 0,
+            "med": 4.278449999999999,
+            "p(90)": 12.186760000000003
+        },
+        "http_req_duration{name:directory_search}": {
+            "p(95)": 7.783509999999995,
+            "p(99)": 11.912316000000002,
+            "max": 30.1203,
+            "avg": 4.633273721340388,
+            "min": 2.5078,
+            "med": 4.0177,
+            "p(90)": 6.237620000000001,
+            "thresholds": {
+                "p(95)<300": false
+            }
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 0
+        },
+        "http_req_duration{name:availability}": {
+            "avg": 5.3343862794612775,
+            "min": 3.2092,
+            "med": 4.817500000000001,
+            "p(90)": 6.53359,
+            "p(95)": 7.371739999999996,
+            "p(99)": 19.441524999999977,
+            "max": 49.788,
+            "thresholds": {
+                "p(95)<300": false
+            }
+        },
+        "http_req_connecting": {
+            "avg": 0.006459233634912188,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 4.0626
+        },
+        "iteration_duration": {
+            "med": 506.3944,
+            "p(90)": 1125.38794,
+            "p(95)": 1133.86249,
+            "p(99)": 1156.351652,
+            "max": 1213.4279,
+            "avg": 621.1163067822735,
+            "min": 502.6303
+        },
+        "bookings_created": {
+            "count": 236,
+            "rate": 1.2390710683150783
+        },
+        "http_req_duration": {
+            "p(99)": 154.36028,
+            "max": 243.1169,
+            "avg": 15.604393001596565,
+            "min": 0,
+            "med": 4.661,
+            "p(90)": 12.653900000000002,
+            "p(95)": 129.83001999999996
+        },
+        "checks": {
+            "passes": 3629,
+            "fails": 0,
+            "value": 1
+        },
+        "unexpected_errors": {
+            "passes": 0,
+            "fails": 3393,
+            "thresholds": {
+                "rate<0.01": false
+            },
+            "value": 0
+        },
+        "http_reqs": {
+            "count": 3758,
+            "rate": 19.730631672576543
+        },
+        "http_req_receiving": {
+            "avg": 0.3031856838744016,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0.9103400000000001,
+            "p(95)": 0.999,
+            "p(99)": 1.4077069999999992,
+            "max": 2.9261
+        },
+        "http_req_blocked": {
+            "avg": 0.008282969664715275,
+            "min": 0,
+            "med": 0,
+            "p(90)": 0,
+            "p(95)": 0,
+            "p(99)": 0,
+            "max": 4.0626
+        }
+    },
+    "setup_data": {
+        "ownerToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlByaDd4VDJfekw5T3daNDAiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIwMWEyMDgyOC1lOTgyLTcyZTMtODYzNC00ZTM5NmM1YjllYjAiLCJzaWQiOiIwMWEyMDgyOC1lZjQ2LTc2MjYtYTBmZS1lMWViOTNiOWYxZjciLCJqdGkiOiIxNzFhZTkyOGIzZjE0MmI4YTlhMTdhMmFmYWZiY2VlNyIsImlzcyI6ImhlYWx0aGNhcmUtcGxhdGZvcm0iLCJhdWQiOiJoZWFsdGhjYXJlLWFwaSIsImlhdCI6MTc5NTQzMzIzMCwibmJmIjoxNzk1NDMzMjMwLCJleHAiOjE3OTU0MzM4MzB9.bA0Ay3ZIcM_vi_GI-mxON8wmuKUcogZEduxBE39WiHikckUpIhwLO7mKiWDCgYC8XpMXSxAEiqmcRq8PeXg8r57OcFIkWOMsbOZPQNMYlg4RRidg3rfaZep83xCBCbFCodPCvf6PFFf826zAE6SgLsmo1gBcwHVpFZpAsaUbk1c61G16EkxS6yv7ii-NPp7uvxAJU2DMThLmBLIUgckoqjDuQvwnZmp7wmybGzTsnmnV-YhWz8dMJdS4_F0KKq4RsOa7X_wjaeT0jjvUUwq1_CAt6FI-qfNMpvMEuHa6yWUH9no3nYUbkJ0-lRsJtlfqAqXj4kiF_-xmvECP5khMLQ",
+        "patientIds": [
+            "01a20828-f000-712a-8918-999797b164e7",
+            "01a20828-f009-77c7-872c-f2aca35a430d",
+            "01a20828-f012-73ca-a605-a5c99701d9b5",
+            "01a20828-f01a-7617-9d69-a9297426b104",
+            "01a20828-f020-74ee-94d8-ce45dd70c52e",
+            "01a20828-f026-72a9-bd46-6294b1e706f3",
+            "01a20828-f02c-75fd-9295-5f88a45871bc",
+            "01a20828-f032-72c1-b2e1-17f2a78791ed",
+            "01a20828-f037-7413-9f98-bf1881ea2e1a",
+            "01a20828-f03b-74dd-8de8-bc8df27b7bf2",
+            "01a20828-f03f-733c-aa76-55879aa0e291",
+            "01a20828-f043-7521-b50b-7e3f118eb1b6",
+            "01a20828-f047-768e-ac6b-bc865c81fb37",
+            "01a20828-f04c-735c-bef4-1efca1a3a668",
+            "01a20828-f050-70db-9a39-b31fe686b8ed",
+            "01a20828-f054-73ef-a76a-33d04e906990",
+            "01a20828-f057-7530-adc0-5418f849eda3",
+            "01a20828-f05c-749d-b35f-63e93518d188",
+            "01a20828-f061-7763-b76d-8e58573b30d5",
+            "01a20828-f065-7154-8d5b-4a0e90e1e86e",
+            "01a20828-f069-716a-ba3b-53cc04d4b509",
+            "01a20828-f06e-73ca-bde5-c9aca22fb30d",
+            "01a20828-f072-7795-a803-ec65ae93b32a",
+            "01a20828-f076-70a4-a903-325de00e770d",
+            "01a20828-f07c-7583-baa9-5e68ec52efde",
+            "01a20828-f081-749f-8ee6-c7074eab8647",
+            "01a20828-f085-7071-af19-06b276b2fe78",
+            "01a20828-f089-72f2-a68b-d34eca3220e0",
+            "01a20828-f08d-770b-8078-5c82a79f123b",
+            "01a20828-f094-723e-bf30-c1a1fc003762",
+            "01a20828-f09a-76ae-ad07-5fe58b2e7c7d",
+            "01a20828-f09f-7248-a79f-c81ae94a3de0",
+            "01a20828-f0a3-768f-85a5-9f295ad43c51",
+            "01a20828-f0a7-7072-a93a-348f81667a40",
+            "01a20828-f0ac-73be-84fa-6a91b3533eaa",
+            "01a20828-f0b0-7347-a473-94171a9b502b",
+            "01a20828-f0b5-774f-99ef-9942c52f3c4a",
+            "01a20828-f0ba-7664-ba3d-61c2c8e9bb14",
+            "01a20828-f0bf-7255-9d55-6cc96d71e69b",
+            "01a20828-f0c3-72e9-b8b8-0f0fafa49ed4",
+            "01a20828-f0c8-77bd-8356-027810a6f140",
+            "01a20828-f0cd-7068-b42a-81c2dab0ec68",
+            "01a20828-f0d3-76da-90b2-1c0178959afc",
+            "01a20828-f0d9-7798-ab33-c56d7e8d9a09",
+            "01a20828-f0de-7457-af4d-949fef0bd353",
+            "01a20828-f0e4-7692-b4e2-13d0e74c333e",
+            "01a20828-f0ea-77ba-94de-ceddf06d82c1",
+            "01a20828-f0ef-70ef-a382-2294666439b9",
+            "01a20828-f0f5-7053-8bbc-ba3d18e23856",
+            "01a20828-f0fb-7452-83ca-367f9269b9fe"
+        ],
+        "portalToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlByaDd4VDJfekw5T3daNDAiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIwMWEyMDgyOS0wYjQ4LTc1ZGMtODRlZS00Yzk3OGFlMjRjMTYiLCJzaWQiOiIwMWEyMDgyOS0wZmMxLTc3NzctOWVhNC0xZjI1NzczMTg4MTgiLCJqdGkiOiIzZTAyYzgzNDgzZTE0OWQwOGNiZTg4OTBjMTI4NjRmOSIsImlzcyI6ImhlYWx0aGNhcmUtcGxhdGZvcm0iLCJhdWQiOiJoZWFsdGhjYXJlLWFwaSIsImlhdCI6MTc5NTQzMzIzOCwibmJmIjoxNzk1NDMzMjM4LCJleHAiOjE3OTU0MzM4Mzh9.BQqxmDiSYOPOUmS7PEMnBXy5VrCnAF7hdXM-XTKGL8oJnJbfZftMUhY6gmIQE_bMSiKFWnVA3jV7XMZKv2WfkZW6lraGvK74h8cjSPDntsoSRZoNAjbwXtHs9cVjUpjO3dr4vSDKUfEOjI63NSeezul9VJmEh8jAdAoJfQy-qde8CgjaUIeHWmXkoCqssFIps-xiYBR3Pjt25SraTzNto2iYtke2d4uoG11YPBcqvhCvX3yfIk98YvINYrE7K3vDK5XPsAu4xevmSY8Kg6sOzpVwPBKgFgGewz-fgqDaQ8WStzA0UP5z5I4_NaNrcYPjNVtC1Vh4FiDsczM6Fsiy8g",
+        "providerId": "01a20828-ef85-7610-9a60-8c85dcc59bf1",
+        "signInUsers": [
+            "perf.signin.mwt6l7272er4zej05@example.test",
+            "perf.signin.mwt6l82x9fb4p1xs6@example.test",
+            "perf.signin.mwt6l93x2brod4ww7@example.test",
+            "perf.signin.mwt6la5364vs94ki8@example.test",
+            "perf.signin.mwt6lb5tbd12gcmj9@example.test"
+        ],
+        "locationId": "01a20828-ef7f-73cd-8f6b-bf58101d5062",
+        "organizationId": "01a20828-ef55-7473-b586-6eb61138e244",
+        "ownerEmail": "perf.owner.mwt6l5eg574llja41@example.test"
+    }
+}

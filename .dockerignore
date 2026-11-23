@@ -1,0 +1,15 @@
+.git
+.github
+.venv
+.env
+*.pem
+*.key
+**/__pycache__
+.pytest_cache
+.mypy_cache
+.ruff_cache
+perf/
+deploy/
+tests/
+docs/
+mail-pickup/

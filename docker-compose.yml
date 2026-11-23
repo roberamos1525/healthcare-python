@@ -1,0 +1,98 @@
+# Local development environment. Not a production deployment.
+#   cp .env.example .env    (then edit the passwords)
+#   docker compose up --build
+# API: http://localhost:8080   Mailpit (captured email): http://localhost:8025   RabbitMQ: http://localhost:15672
+
+name: healthcare-python
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_SUPERUSER_PASSWORD:?set POSTGRES_SUPERUSER_PASSWORD in .env}
+      HEALTHCARE_MIGRATOR_PASSWORD: ${HEALTHCARE_MIGRATOR_PASSWORD:?set HEALTHCARE_MIGRATOR_PASSWORD in .env}
+      HEALTHCARE_APP_PASSWORD: ${HEALTHCARE_APP_PASSWORD:?set HEALTHCARE_APP_PASSWORD in .env}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./deploy/docker/postgres-init.sh:/docker-entrypoint-initdb.d/10-create-roles.sh:ro
+      - ./deploy/sql:/docker-entrypoint-initdb.d/sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d healthcare"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  rabbitmq:
+    image: rabbitmq:4-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-healthcare}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:?set RABBITMQ_PASSWORD in .env}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  migrate:
+    build: .
+    command: ["migrate"]
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Database: Host=postgres;Database=healthcare;Username=healthcare_app;Password=${HEALTHCARE_APP_PASSWORD}
+      ConnectionStrings__Migrations: Host=postgres;Database=healthcare;Username=healthcare_migrator;Password=${HEALTHCARE_MIGRATOR_PASSWORD}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    build: .
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      HEALTHCARE_WORKERS: "2"
+      ConnectionStrings__Database: Host=postgres;Database=healthcare;Username=healthcare_app;Password=${HEALTHCARE_APP_PASSWORD};Maximum Pool Size=25
+      ConnectionStrings__Redis: redis:6379
+      Auth__FieldEncryptionKey: ${AUTH_FIELD_ENCRYPTION_KEY:-}
+      Auth__SigningKeyPem: ${AUTH_SIGNING_KEY_PEM:-}
+      App__FrontendBaseUrl: ${FRONTEND_BASE_URL:-http://localhost:5173}
+      Email__Provider: Smtp
+      Email__SmtpHost: mailpit
+      Email__SmtpPort: "1025"
+      Messaging__Provider: RabbitMq
+      Messaging__RabbitMqUri: amqp://${RABBITMQ_USER:-healthcare}:${RABBITMQ_PASSWORD}@rabbitmq:5672/
+      Cors__AllowedOrigins__0: http://localhost:5173
+    ports:
+      - "8080:8080"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+
+volumes:
+  postgres-data:
